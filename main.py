@@ -73,16 +73,17 @@ if inp == "Start":
          print ('Too bad!', usertext, 'You have lost!, the word was:', woord)
          opnieuw=str(input("Play again? Type yes or no"))  
          if opnieuw == "no":
+          print ("Thank you for playing!")
           speel = False
           break
      
 elif inp == "Instructions":
  print("Before the game starts, you can choose the options of the game. You can choose the length of the word you have to guess. Once you presses play, you have 10 tries to guess the right word, by choosing diffrent types of letters. If the letter is found in the word, it will be put on the dots. If the letter is not in the word, than the start of a picture will be drawn. If the picture is completed before you have finished the word than you lose. Have you guessed the word, than you win. Is that clear?") 
-antwoord = input("yes / no")
-if antwoord == "yes":
- print("Let's start the game then!")
- speel = True 
- while speel:
+ antwoord = input("yes / no")
+ if antwoord == "yes":
+  print("Let's start the game then!")
+  speel = True 
+  while speel:
    woordkeuze = random.choice(woorden) 
    woord = (woordkeuze)
    pogingen =' '
@@ -127,10 +128,11 @@ if antwoord == "yes":
          print ('Too bad!', usertext, 'You have lost!, the word was:', woord)
          opnieuw=str(input("Play again? Type yes or no"))  
          if opnieuw == "no":
+          print ("Thank you for playing!")
           speel = False
           break
   
-elif antwoord == "no":
+if antwoord == "no":
   print("Here are the instructions again")
   print("Before the game starts, you can choose the options of the game. You can choose the length of the word you have to guess. Once you presses play, you have 8 tries to guess the right word, by choosing diffrent types of letters. If the letter is found in the word, it will be put on the dots. If the letter is not in the word, than the start of a picture will be drawn. If the picture is completed before you have finished the word than you lose. Have you guessed the word, than you win.")
   print ("Now, let's start the game!")
@@ -180,6 +182,7 @@ elif antwoord == "no":
          print ('Too bad!', usertext, 'You have lost!, the word was:', woord)
          opnieuw=str(input("Play again? Type yes or no"))  
          if opnieuw == "no":
+          print ("Thank you for playing!")
           speel = False
           break
 
