@@ -27,43 +27,53 @@ print("-to show the instructions, type: Instructions")
 inp = input("Enter a word:")
 if inp == "Start":
   print("Alright, let's begin then!")
-  woordkeuze = random.choice(woorden) 
-  woord = (woordkeuze)
-  pogingen =' '
-  beurten = 10
-  while beurten > 0:
-    lettersover = 0
-    geradenwoord =' '
-    for char in woord:
-      if char in pogingen:
-        geradenwoord=geradenwoord + (char)
-      else:
-        geradenwoord=geradenwoord+ ('_')
-        lettersover += 1
-    print ('Word:',geradenwoord, '.Letters that have already been guessed:', pogingen)                             
-    if lettersover == 0:
-      print("You have won!")
-      break
-    print 
-    poging = input ('Guess the letter:')
+  speel = True 
+  while speel:
+   woordkeuze = random.choice(woorden) 
+   woord = (woordkeuze)
+   pogingen =' '
+   beurten = 10
+   while beurten > 0:
+     lettersover = 0
+     geradenwoord =' '
+     for char in woord:
+       if char in pogingen:
+         geradenwoord=geradenwoord + (char)
+       else:
+         geradenwoord=geradenwoord+ ('_')
+         lettersover += 1
+     print ('Word:',geradenwoord, '.Letters that have already been guessed:', pogingen)                             
+     if lettersover == 0:
+       print("You have won!")
+       opnieuw=str(input("Play again? Type yes or no"))
+       if opnieuw == "no":
+        speel = False
+        break
+       else:
+         speel = True
+     print 
+     poging = input ('Guess the letter:')
 
-    pogingen += poging
-    if poging not in woord:
-      beurten -= 1
+     pogingen += poging
+     if poging not in woord:
+       beurten -= 1
       
-      galglayout = beurten
-      levens=(10-beurten)
-      while levens>0:
-        print (galg[galglayout])
-        galglayout +=1
-        levens -=1
-      print ("")
+       galglayout = beurten
+       levens=(10-beurten)
+       while levens>0:
+         print (galg[galglayout])
+         galglayout +=1
+         levens -=1
+       print ("")
 
-      print ("Unfortunately, that is wrong!")
-      print ('You still have', + beurten, 'lives')
-      if beurten == 0:
-        print ('Too bad!', usertext, 'You have lost!, the word was:', woord)
-         
+       print ("Unfortunately, that is wrong!")
+       print ('You still have', + beurten, 'lives')
+       if beurten == 0:
+         print ('Too bad!', usertext, 'You have lost!, the word was:', woord)
+         opnieuw=str(input("Play again? Type yes or no"))  
+         if opnieuw == "no":
+          speel = False
+          break
      
 
 
