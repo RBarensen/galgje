@@ -75,14 +75,21 @@ if inp == "Start":
           speel = False
           break
      
-
-
-
-    
-
 elif inp == "Instructions":
-  print("Before the game starts, you can choose the options of the game. You can choose the length of the word you have to guess. Once you presses play, you have 8 tries to guess the right word, by choosing diffrent types of letters. If the letter is found in the word, it will be put on the dots. If the letter is not in the word, than the start of a picture will be drawn. If the picture is completed before you have finished the word than you lose. Have you guessed the word, than you win.")
+  print("Before the game starts, you can choose the options of the game. You can choose the length of the word you have to guess. Once you presses play, you have 10 tries to guess the right word, by choosing diffrent types of letters. If the letter is found in the word, it will be put on the dots. If the letter is not in the word, than the start of a picture will be drawn. If the picture is completed before you have finished the word than you lose. Have you guessed the word, than you win.")
 else:
     print("Invalid input!")
+
+print ("Is that clear?")
+antwoord = input("yes / no")
+if antwoord == "yes":
+ print("Let's start the game then!")
   
+elif antwoord == "no":
+  print("Here are the instructions again")
+  print("Before the game starts, you can choose the options of the game. You can choose the length of the word you have to guess. Once you presses play, you have 8 tries to guess the right word, by choosing diffrent types of letters. If the letter is found in the word, it will be put on the dots. If the letter is not in the word, than the start of a picture will be drawn. If the picture is completed before you have finished the word than you lose. Have you guessed the word, than you win.")
+  print ("Now, let's start the game!")
+
+ 
+
  
