@@ -1,6 +1,8 @@
 import random
 
+#Woordenlijst
 woorden = ["champion", "eagles", "promise", "stripes", "pavement", "motorcycle", "square", "mountain", "waterfall",]
+
 galg = [
   "---------",
   "|       |",
@@ -14,10 +16,12 @@ galg = [
   "------------"
 ]
 
+#Introductie
 print("Welcome to Python galgje")
 usertext = input("What is your name? ")
 print("Hello", usertext)
 
+#Spel spelen
 def speel():
    woordkeuze = random.choice(woorden) 
    woord = (woordkeuze)
@@ -79,7 +83,7 @@ if inp == "Start":
   print("Alright, let's begin then!")
   speel()
   
-     
+#Instructies
 elif inp == "Instructions":
  print("Before the game starts, you can choose the options of the game. You can choose the length of the word you have to guess. Once you presses play, you have 10 tries to guess the right word, by choosing diffrent types of letters. If the letter is found in the word, it will be put on the dots. If the letter is not in the word, than the start of a picture will be drawn. If the picture is completed before you have finished the word than you lose. Have you guessed the word, than you win. Is that clear?") 
  antwoord = input("yes / no")
